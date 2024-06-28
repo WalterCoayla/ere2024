@@ -27,6 +27,7 @@
                         data-accion="validar" data-formulario="frmLogin"
                         data-home="home"
                         >
+                        <!-- <form action="?ctrl=CtrlUsuario&accion=validar" method="post"> -->
                     <div class="mb-3 row">
                         <label for="usuario" class="col-sm-2 col-form-label">Usuario</label>
                         <div class="col-sm-10">

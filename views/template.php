@@ -7,7 +7,6 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
     <link rel="icon" type="image/png" href="./assets/img/favicon.png">
     <title>
         DREMO-ERE
@@ -43,10 +42,6 @@
         <main id="content" style="display: none;" class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
         <!-- Navbar -->
         <div id="menu"></div>
-        <?php 
-    /* if (isset($_SESSION['dni']))
-      require_once "template/nav.php"; */ ?>
-
         <!-- End Navbar -->
         <div class="container-fluid py-4 px-4">
             <div id="home">
@@ -55,11 +50,27 @@
 
             </div>
 
-
             <!-- Footer -->
              <div id="pie"></div>
 
             <?php /* require_once "template/footer.php"; */ ?>
+             <footer class="footer py-4  ">
+        <div class="container-fluid">
+          <div class="row align-items-center justify-content-lg-between">
+            <div class="col">
+              <div class="copyright text-center text-sm text-muted">
+                © <script>
+                  document.write(new Date().getFullYear())
+                </script>,
+                
+                <a href="?" class="font-weight-bold">DREMO</a> - 
+                Dirección Regional de Educación - Moquegua.
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </footer>
 
             <!-- End Footer -->
 

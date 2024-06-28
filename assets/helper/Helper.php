@@ -117,4 +117,26 @@ abstract class Helper {
     return strtr($string, $caracteresNoReconocidos);
   }
 
+  static function getOrdinal($numero) {
+    $data = [
+        1 => '1ro.', 2 => '2do.', 3 => '3ro.', 4 => '4to.', 5 => '5to.',
+        6 => '6to.', 7 => '7mo.', 8 => '8vo.', 9 => '9no.', 10 => '10mo.'
+    ];
+
+    return (array_key_exists($numero, $data)) ? $data[$numero]:"Clave no encontrada";
+    
+  }
+
+  static function separa2Array($data,$valor=''){
+    $seleccionados = [];
+    $otros=[];
+    
+    foreach ($data as $item) 
+        if ($item['nivel'] === $valor) 
+            $seleccionados[] = $item;
+         else 
+            $otros[] = $item;
+    
+    return array($seleccionados,$otros);
+  }
 }

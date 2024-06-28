@@ -3,6 +3,8 @@ require_once './core/Controlador.php';
 require_once './models/Usuario.php';
 
 class CtrlUsuario extends Controlador{
+    private $_usuario;
+
     public function index(){
 
         // echo "Saludos desde " .__CLASS__;
@@ -21,9 +23,9 @@ class CtrlUsuario extends Controlador{
         if (! $this->preValidar())
             $this->cerrarSesion();
         
-        $usuario = new Usuario;
+        $this->_usuario = new Usuario;
         
-        $usuario->validar($_POST['usuario'],$_POST['clave']);
+        $this->_usuario->validar($_POST['usuario'],$_POST['clave']);
         
         if (! isset($_SESSION)){
             header("Location: index.php"); die();
@@ -37,10 +39,19 @@ class CtrlUsuario extends Controlador{
     }
     private function showDashBoard($idTipo){
         // Si es 1: Administrador, 3:Dremo, 4: Ugel
+       $secciones = $this->_usuario->getGrados()['data'];
+
+        $niveles = Helper::separa2Array($secciones, 'Primaria');
+        $dataPrincipal = [
+            'primaria'=> $niveles[0],
+            'secundaria'=> $niveles[1],
+        ];
+        /* var_dump($dataPrincipal);exit; */
+        $home = $this->show('administrador/principal.php',$dataPrincipal,true);
+
         if (in_array($idTipo,[1,3,4])){
 
             $menu = $this->show('template/nav.php',null,true);
-            $home = $this->show('administrador/principal.php',null,true);
             $datos = array(
                 'menu'=> $menu,
                 'contenido'=>$home
@@ -61,6 +72,12 @@ class CtrlUsuario extends Controlador{
     public function cerrarSesion(){
         session_destroy();
         header("Location: index.php"); die();
+    }
+    public function registroUsuario(){
+        echo "Registro de usuarios";
+    }
+    public function informacionUsuario(){
+        echo "informacion de usuarios";
     }
 
 }

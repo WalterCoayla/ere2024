@@ -73,5 +73,10 @@ class Usuario extends Modelo {
         $respuesta = $this->_bd->ejecutar($sql,$parametros);    
     }
 
+    public function getGrados(){
+        $sql = "SELECT * FROM grados ORDER BY nivel, grado";
+        $parametros = [];
+        return $this->_bd->ejecutar($sql,$parametros);
+    }
 
 }
