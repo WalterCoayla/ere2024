@@ -74,10 +74,13 @@ class CtrlUsuario extends Controlador{
         header("Location: index.php"); die();
     }
     public function registroUsuario(){
-        echo "Registro de usuarios";
+        echo $this->show('usuario/frmNuevo.php',null,true);
     }
     public function informacionUsuario(){
-        echo "informacion de usuarios";
+        echo $this->show('usuario/informacionUsuarios.php',null,true);
+    }
+    public function vistaUsuarios(){
+        echo $this->show('usuario/accesoUsuarios.php',null,true);
     }
 
 }

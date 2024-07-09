@@ -1,8 +1,7 @@
-<nav class="navbar navbar-dark navbar-expand-lg"
+<nav class="navbar navbar-dark navbar-expand-lg px-2"
     style="background-color: #126dc7; box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%)">
     <a class="navbar-brand" href="?">
-        <img src="./assets/img/logos/logoDRE_blanco.png"  height="30" class="d-inline-block align-top"
-            alt="">
+        <img src="./assets/img/logos/logoDRE_blanco.png" height="30" class="d-inline-block align-top" alt="">
         .:: DREMO ::.
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -11,7 +10,7 @@
     </button>
     <div class="collapse navbar-collapse text-menu" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            
+
             <?php if ($_SESSION['descripcionTipo'] == 'Administrador') : ?>
             <li class="nav-item dropdown">
                 <div class="dropdown">
@@ -65,11 +64,11 @@
 
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item xLink" href="#" data-ctrl="CtrlCuadernillo"
-                            data-accion="crearCuadernillo"><i
-                                class="fab fa-creative-commons-share"></i> Crear Cuadernillo</a>
+                            data-accion="crearCuadernillo"><i class="fab fa-creative-commons-share"></i> Crear
+                            Cuadernillo</a>
                         <a class="dropdown-item xLink" href="#" data-ctrl="CtrlCuadernillo"
-                            data-accion="consultaCuadernillo"><i
-                                class="fas fa-cloud-upload-alt"></i> Consulta Cuadernillo</a>
+                            data-accion="consultaCuadernillo"><i class="fas fa-cloud-upload-alt"></i> Consulta
+                            Cuadernillo</a>
                     </ul>
                 </div>
 
@@ -84,10 +83,11 @@
                         <a class="dropdown-item xLink" href="#" data-ctrl="CtrlUsuario" data-accion="registroUsuario">
                             <i class="fas fa-user-alt"></i>
                             Registro</a>
-                        <a class="dropdown-item xLink" href="#" data-ctrl="CtrlUsuario" data-accion="informacionUsuario">
+                        <a class="dropdown-item xLink" href="#" data-ctrl="CtrlUsuario"
+                            data-accion="informacionUsuario">
                             <i class="fas fa-clipboard-list"></i>
                             Información</a>
-                        <a class="dropdown-item xLink" href="#" data-ctrl="CtrlUsuario" data-accion="vistaUsuario">
+                        <a class="dropdown-item xLink" href="#" data-ctrl="CtrlUsuario" data-accion="vistaUsuarios">
                             <i class="fas fa-users"></i> Vista Usuarios</a>
 
                     </div>
@@ -98,16 +98,14 @@
                         aria-expanded="false">
                         <i class="fas fa-bezier-curve"></i> Matriz
                     </a>
-                    <div class="dropdown-menu xLink" href="#" data-ctrl="CtrlMatriz"
-                            data-accion="crearMatriz">
-                        <a class="dropdown-item" href="#" id="crearmatriz">
-                            <i class="fas fa-bezier-curve"></i> 
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item xLink" href="#" data-ctrl="CtrlMatriz" data-accion="crearMatriz">
+                            <i class="fas fa-bezier-curve"></i>
                             Crear Matriz</a>
-                        <a class="dropdown-item xLink" href="#" data-ctrl="CtrlMatriz"
-                            data-accion="verMatriz">
+                        <a class="dropdown-item xLink" href="#" data-ctrl="CtrlMatriz" data-accion="verMatriz">
                             <i class="fas fa-binoculars"></i> Ver</a>
-                        <a class="dropdown-item xLink" href="#" data-ctrl="CtrlMatriz"
-                            data-accion="listadoMatriz">><i class="fas fa-list-ol"></i> Listado</a>
+                        <a class="dropdown-item xLink" href="#" data-ctrl="CtrlMatriz" data-accion="listadoMatriz">><i
+                                class="fas fa-list-ol"></i> Listado</a>
                     </div>
             </li>
             <li class="nav-item dropdown">
@@ -117,12 +115,10 @@
                         <i class="fas fa-clipboard-list"></i> Logro
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item xLink" href="#" data-ctrl="CtrlLogro"
-                            data-accion="crearLogro">
+                        <a class="dropdown-item xLink" href="#" data-ctrl="CtrlLogro" data-accion="crearIndicador">
                             <i class="fas fa-clipboard-list"></i>
-                            Crear Logro</a>
-                        <a class="dropdown-item xLink" href="#" data-ctrl="CtrlLogro"
-                            data-accion="listadoLogro">
+                            Crear Indicador</a>
+                        <a class="dropdown-item xLink" href="#" data-ctrl="CtrlLogro" data-accion="listadoLogro">
                             <i class="fas fa-list-ol"></i> Listado</a>
 
                     </div>
@@ -136,17 +132,17 @@
                         <i class="far fa-address-book"></i> Informes
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item xLink" href="#" data-ctrl="CtrlInforme"
-                            data-accion="respuestasInforme">
+                        <a class="dropdown-item xLink" href="#" data-ctrl="CtrlInforme" data-accion="respuestasInforme">
                             <i class="far fa-file-alt"></i>
                             Respuestas</a>
-                        <a class="dropdown-item xLink" href="#" data-ctrl="CtrlInforme"
-                            data-accion="ieInforme">
+                        <a class="dropdown-item xLink" href="#" data-ctrl="CtrlInforme" data-accion="ieInforme">
                             <i class="fas fa-clipboard-check"></i> I.E.</a>
-                        <a class="dropdown-item xLink" href="#" data-ctrl="CtrlInforme"
-                            data-accion="distritosInforme">
+                        <a class="dropdown-item xLink" href="#" data-ctrl="CtrlInforme" data-accion="distritosInforme">
                             <i class="fas fa-map-marked-alt"></i>
                             Distritos</a>
+                        <a class="dropdown-item xLink" href="#" data-ctrl="CtrlInforme" data-accion="iieeFaltantes">
+                            <i class="fas fa-map-marked-alt"></i>
+                            IIEE Faltantes</a>
                     </div>
             </li>
 
@@ -157,17 +153,19 @@
                         <i class="fas fa-not-equal"></i> Comparar
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#" id="comparar"><i class="far fa-calendar-alt"></i> Por Año</a>
-                        <a class="dropdown-item" href="#" id="compararperiodo"><i class="fas fa-cogs"></i> Por
-                            Evaluación</a>
+                        <a class="dropdown-item xLink" href="#" data-ctrl="CtrlComparar" data-accion="compararXAnio">
+                            <i class="far fa-calendar-alt"></i> Por Año</a>
+                            <hr class="dropdown-divider">
+                        <a class="dropdown-item xLink" href="#" data-ctrl="CtrlComparar" data-accion="compararXEvaluacion">
+                            <i class="fas fa-cogs"></i> Por Evaluación</a>
                     </div>
             </li>
             <?php endif ; ?>
-            <li class="nav-item dropdown">
-            </li>
+            
         </ul>
-        <div class="dropdown text-usuario">
-            <button class="btn btn-outline-light dropdown-toggle letramenub" type="button" data-bs-toggle="dropdown"
+        <div class="dropdown d-flex justify-content-end text-usuario">
+            <button class="btn btn-outline-light dropdown-toggle letramenub" 
+             type="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 <i class="fas fa-user"></i> <?=$_SESSION['fullName']; ?>
             </button>
@@ -179,8 +177,6 @@
                 </li>
             </ul>
         </div>
-
-
     </div>
 
     <div class="modal fade" id="cambiarclave" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"

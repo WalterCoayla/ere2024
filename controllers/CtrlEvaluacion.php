@@ -43,19 +43,39 @@ class CtrlEvaluacion extends Controlador{
         echo $this->show('evaluacion/importarEvaluacion.php',$data,true);
     }
     public function totalEstudiantesEvaluacion(){
-        echo "Total Estudiantes";
+        $data = [
+           'evaluaciones'=> $this->_modelo->getEvaluaciones()
+        ];
+
+        echo $this->show('evaluacion/totalEstudiantes.php',$data,true);
     }
     public function porcXAreasEvaluacion(){
-        echo "Porcentaje x Areas";
+        $data = [
+           'evaluaciones'=> $this->_modelo->getEvaluaciones()
+        ];
+
+        echo $this->show('evaluacion/porcentajeAreas.php',$data,true);
     }
     public function consolidadoXAreasEvaluacion(){
-        echo "Consolidado x Areas";
+        $data = [
+           'evaluaciones'=> $this->_modelo->getEvaluaciones()
+        ];
+
+        echo $this->show('evaluacion/consolidadoAreas.php',$data,true);
     }
     public function consolidadoEvaluacion(){
-        echo "Consolidado Evaluaciones";
+        $data = [
+           'evaluaciones'=> $this->_modelo->getEvaluaciones()
+        ];
+
+        echo $this->show('evaluacion/consolidadoEvaluacion.php',$data,true);
     }
     public function datosEvaluacion(){
-        echo "Datos Evaluaciones";
+        $data = [
+           'evaluaciones'=> $this->_modelo->getEvaluaciones()
+        ];
+
+        echo $this->show('evaluacion/asistenciaEvaluacion.php',$data,true);
     }
 
 }

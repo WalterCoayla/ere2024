@@ -10,9 +10,19 @@ class CtrlCuadernillo extends Controlador{
     }
 
     public function crearCuadernillo(){
-        echo "Crear Cuadernillo";
+        /* $datos = $this->_modelo->getDataEvaluacionArea(); */
+        $data = [
+           'evaluaciones'=> $this->_modelo->getAllData('evaluacion'),
+           'areas'=> $this->_modelo->getAllData('area')
+        ];
+
+        echo $this->show('cuadernillo/crearCuadernillo.php',$data,true);
     }
     public function consultaCuadernillo(){
-        echo "Consultar Cuadernillo";
+        $data = [
+           'evaluaciones'=> $this->_modelo->getAllData('evaluacion')
+        ];
+
+        echo $this->show('cuadernillo/listarCuadernillo.php',$data,true);
     }
 }

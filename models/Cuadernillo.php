@@ -13,4 +13,5 @@ class Cuadernillo extends Modelo {
         parent::__construct($this->_tabla);
     }
 
+
 }

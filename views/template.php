@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+    <link rel="icon" type="image/png" href="./assets/img/icons/favicon-32x32.png">
     <title>
         DREMO-ERE
     </title>
@@ -20,10 +20,7 @@
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <!-- CSS Files -->
-    <!-- <link id="pagestyle" href="./assets/css/material-dashboard.css?v=3.1.0" rel="stylesheet" /> -->
-    <!-- <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css'> 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    -->
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -37,13 +34,14 @@
 </head>
 
 <body class="g-sidenav-show  bg-gray-200">
+    <div class="marca" id="marca"></div>
     <div id="loader" class="loader"></div>
     
-        <main id="content" style="display: none;" class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
-        <!-- Navbar -->
-        <div id="menu"></div>
-        <!-- End Navbar -->
-        <div class="container-fluid py-4 px-4">
+    <main id="content" style="display: none;" class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+        <div class="container-fluid py-2 px-2">
+            <!-- Navbar -->
+            <div id="menu"></div>
+            <!-- End Navbar -->
             <div id="home">
 
                 <?=$contenido?>
@@ -64,7 +62,8 @@
                 </script>,
                 
                 <a href="?" class="font-weight-bold">DREMO</a> - 
-                Dirección Regional de Educación - Moquegua.
+                Dirección Regional de Educación - Moquegua. <br>
+                v1.0 Proyecto Educativo Virtual
               </div>
             </div>
             

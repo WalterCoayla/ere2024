@@ -1,9 +1,9 @@
 <?php
 require_once './core/Modelo.php';
 
-class Matriz extends Modelo {
+class Comparar extends Modelo {
     
-    private $_tabla='Evaluacion';
+    private $_tabla='Logro';
     /* private $_vista='v_constanciaEco'; */
 
     public function __construct($id=null){
@@ -11,4 +11,5 @@ class Matriz extends Modelo {
 
         parent::__construct($this->_tabla);
     }
+
 }

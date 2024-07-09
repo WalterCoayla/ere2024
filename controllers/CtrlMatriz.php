@@ -10,12 +10,24 @@ class CtrlMatriz extends Controlador{
     }
 
     public function crearMatriz(){
-        echo "Crear Matriz";
-    }
+        $data = [
+           'evaluaciones'=> $this->_modelo->getAllData('evaluacion'),
+           'areas'=> $this->_modelo->getAllData('area')
+        ];
+        echo $this->show('matriz/crearMatriz.php',$data,true);
+    } 
+    
     public function verMatriz(){
-        echo "Ver matriz";
+        $data = [
+           'evaluaciones'=> $this->_modelo->getAllData('evaluacion'),
+           'areas'=> $this->_modelo->getAllData('area')
+        ];
+        echo $this->show('matriz/verMatriz.php',$data,true);
     }
     public function ListadoMatriz(){
-        echo "Listado matriz";
+        $data = [
+           'evaluaciones'=> $this->_modelo->getAllData('evaluacion')
+        ];
+        echo $this->show('matriz/listadoMatriz.php',$data,true);
     }
 }

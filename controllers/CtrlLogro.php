@@ -9,13 +9,24 @@ class CtrlLogro extends Controlador{
         $this->_modelo = new Logro;
     }
 
-    public function crearLogro(){
-        echo "Crear Logro";
+    public function crearIndicador(){
+        
+        $data = [
+           'evaluaciones'=> $this->_modelo->getAllData('evaluacion'),
+           'areas'=> $this->_modelo->getAllData('area')
+        ];
+        
+        echo $this->show('logro/crearIndicador.php',$data,true);
     }
     public function verLogro(){
-        echo "Ver Logro";
+        echo "verLogro";
     }
     public function listadoLogro(){
-        echo "Listado Logro";
+        $data = [
+           'evaluaciones'=> $this->_modelo->getAllData('evaluacion')
+           
+        ];
+        
+        echo $this->show('logro/listadoLogro.php',$data,true);
     }
 }

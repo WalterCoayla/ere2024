@@ -75,4 +75,39 @@ $(function(){
             $('.spinner-border').addClass("cargar");
         }); 
      });
+
+     $(document).on('change', '.xCombo', function() {
+        let obj = $(this);
+        let dato = obj.val()
+        let ctrl = obj.data('ctrl');
+        let accion = obj.data('accion');
+        let destino = "#"+obj.data('destino');
+        /* let ctrl = obj.data('ctrl');*/
+        console.log(dato)
+        
+        if (dato!='') {
+           $.ajax({
+            url:'?ctrl='+ctrl+'&accion='+accion,
+            type:'POST',
+            /* contentType: false, */
+            data: 'dato='+dato,
+            beforeSend: function() {
+                $('.loader').show();
+                
+            }
+            }).done(function(datos){
+                $('.loader').hide();
+                
+                $(destino).html(datos);
+            }).fail(function(){
+                alert("error: link->controlador");
+            }).always(function() {
+                $('.loader').hide();
+            }); 
+        } else {
+            $(destino).html('<option value="">Selecciona...</option>');
+
+        }
+        
+     });
 });

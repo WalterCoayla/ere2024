@@ -1,6 +1,5 @@
 <?php
 require_once './core/Modelo.php';
-require_once './assets/helper/Helper.php';
 
 class Logro extends Modelo {
     

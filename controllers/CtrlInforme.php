@@ -10,12 +10,19 @@ class CtrlInforme extends Controlador{
     }
 
     public function respuestasInforme(){
-        echo "respuestasInforme Informe";
+        $data = [
+           'evaluaciones'=> $this->_modelo->getAllData('evaluacion','descripcion desc'),
+           'areas'=> $this->_modelo->getAllData('area','descripcionarea'),
+           'ugeles'=> $this->_modelo->getAllData('ugel','ugeldescripcion'),
+        ];
+        
+        echo $this->show('informes/respuestasInforme.php',$data,true);
+
     }
     public function ieInforme(){
-        echo "ieInforme Informe";
+        echo $this->show('informes/informesIIEE.php',false,true);
     }
     public function distritosInforme(){
-        echo "distritosInforme Informe";
+        echo $this->show('informes/distritosUGEL.php',false,true);
     }
 }
